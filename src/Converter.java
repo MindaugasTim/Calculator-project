@@ -1,14 +1,10 @@
 
 public interface Converter {
 
-	public void toBinary(int x);
-	public void toOctal(int x);
-	public void toHexadecimal(int x);
-	
-	
-	
-	
-	
-	
-	
+	public void DecToBinary(int x);
+	public void BinaryToDec(String dec);
+	public void DecToOctal(int x);
+	public void OctalToDec(String dec);
+	public void DecToHexadecimal(int x);	
+	public void HexadecimalToDec(String dec);	
 }
