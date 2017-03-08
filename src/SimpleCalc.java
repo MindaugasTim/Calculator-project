@@ -1,30 +1,30 @@
 
 public class SimpleCalc implements Operations {
 
-	
+	private String result;
+
 	@Override
-	public void add(double x, double y) {
-		System.out.println(x+y);
+	public String add(double x, double y) {
+		result = x + " + " + y + " = " + (x + y);
+		return result;
 	}
 
 	@Override
-	public void subtract(double x, double y) {
-		System.out.println(x-y);
+	public String subtract(double x, double y) {
+		result = x + " - " + y + " = " + (x - y);
+		return result;
 	}
 
 	@Override
-	public void divide(double x, double y) {
-		System.out.println(x/y);
+	public String divide(double x, double y) {
+		result = y == 0 ? "You cant divide by 0" : x + " / " + y + " = " + (x / y);
+		return result;
 	}
 
 	@Override
-	public void multiply(double x, double y) {
-		System.out.println(x*y);
+	public String multiply(double x, double y) {
+		result = x + " * " + y + " = " + (x * y);
+		return result;
 	}
 
-
-	
-	
 }
-	
-

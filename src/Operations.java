@@ -2,14 +2,15 @@
 public interface Operations {
 
 
-	public void add(double x, double y);
+	public String add(double x, double y);
 
-	public void subtract(double x, double y);
+	public String subtract(double x, double y);
 
-	public void divide(double x, double y);
+	public String divide(double x, double y);
 
-	public void multiply(double x, double y);
+	public String multiply(double x, double y);
 	
+
 
 	
 	
