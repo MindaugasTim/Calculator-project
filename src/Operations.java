@@ -9,6 +9,7 @@ public interface Operations {
 	public void divide(double x, double y);
 
 	public void multiply(double x, double y);
+	
 
 	
 	
