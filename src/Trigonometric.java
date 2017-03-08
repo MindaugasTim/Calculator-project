@@ -5,14 +5,19 @@ public class Trigonometric implements TrigoInterface {
 	private Scanner scanner;
 	private double number;
 	private static DecimalFormat df = new DecimalFormat("###.##");
+	Memory memory;
+	private String result;
 
 	public Trigonometric(){
 		scanner = new Scanner(System.in);
 	}
-	
+
+	public String getResult() {
+		return result;
+	}
 
 	@Override
-	public String trigoMenu(){
+	public void trigoMenu(){
 		System.out.print("Enter number You want to convert: ");
 		this.number = scanner.nextDouble();
 		
@@ -21,37 +26,45 @@ public class Trigonometric implements TrigoInterface {
 		
 		switch (choose) {
 		case 1:
-			return countSin();
-			
+			countSin();
+			break;
 		case 2:
-			return countCos();
-					
+			countCos();
+			break;	
 		case 3:
-			return countTan();
-						
+			countTan();
+			break;			
 		case 4:
-			return countCot();
-				
+			countCot();
+			break;
 		default:
 			System.out.println("You entered wrong command! Bye bye.");
 			
 		}
-		return "";
+		
 	} 
 
-	public String countSin() {
-		return df.format(Math.sin(this.number));
+	public void countSin() {		
+		result = df.format(Math.sin(this.number));
+		Memory.addToMemory(result);
+		System.out.println("Sin of " + number + " = " + result);
 	}
 	
-	public String countCos() {
-		return df.format(Math.cos(this.number));
+	public void countCos() {
+		result = df.format(Math.cos(this.number));
+		Memory.addToMemory(result);
+		System.out.println("Cos of " + number + " = " + result);
 	}
 	
-	public String countTan() {
-		return df.format(Math.tan(this.number));	
+	public void countTan() {
+		result = df.format(Math.tan(this.number));	
+		Memory.addToMemory(result);
+		System.out.println("Tangent of " + number + " = " + result);
 	}
 	
-	public String countCot() {
-		return df.format(Math.cos(this.number) / Math.sin(this.number));	
+	public void countCot() {
+		result = df.format(Math.cos(this.number) / Math.sin(this.number));
+		Memory.addToMemory(result);
+		System.out.println("Cotangent of " + number + " = " + result);
 	}
 }
