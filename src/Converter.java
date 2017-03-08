@@ -5,4 +5,10 @@ public interface Converter {
 	public void toOctal(int x);
 	public void toHexadecimal(int x);
 	
+	
+	
+	
+	
+	
+	
 }
