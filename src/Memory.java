@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class Memory {
 
+
 	private static ArrayList<String> memory = new ArrayList<String>(3);
 
 	public static void addToMemory(String toMemory) {

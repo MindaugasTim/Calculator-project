@@ -1,6 +1,6 @@
 
 public interface TrigoInterface {
 
-	public String trigoMenu();
+	public void trigoMenu();
 
 }
