@@ -1,13 +1,13 @@
 import java.util.Scanner;
 
 public class Menu {
-	NumConverter converter = new NumConverter();
-	SimpleCalc simpleCalc = new SimpleCalc();
-	QuadraticEquation quadratic = new QuadraticEquation();
-	Trigonometric trigo = new Trigonometric();
-	Scanner scanner = new Scanner(System.in);
+	public static NumConverter converter = new NumConverter();
+	public static SimpleCalc simpleCalc = new SimpleCalc();
+	public static QuadraticEquation quadratic = new QuadraticEquation();
+	public static Trigonometric trigo = new Trigonometric();
+	public static Scanner scanner = new Scanner(System.in);
 	
-	public void menu(){
+	public static void menu(){
 		System.out.println("Choose what You want from the list:\n"
 				+ "1. Simple artitmetic converter\n"
 				+ "2. Convert numbers from dec to bin etc\n"
@@ -20,6 +20,9 @@ public class Menu {
 		
 		case 1:
 			simpleCalc.calculationMenu();
+			break;
+		case 2:
+			converter.ConverterMenu();
 			break;
 		case 3:
 			quadratic.quadraticMenu();
