@@ -14,7 +14,8 @@ public class NumConverter implements Converter{
 						+"\n4. Octal	-> Decimal"
 						+"\n5. Decimal	-> Hexadecimal"
 						+"\n6. Hexadecimal	-> Decimal"	
-						+"\n0. EXIT");
+						+"\n7. Show memory"
+						+"\n8. Go to main menu");
 		int choose = number.nextInt();
 		
 		switch (choose) {
@@ -23,6 +24,7 @@ public class NumConverter implements Converter{
 				int decToBin = number.nextInt();
 				DecToBinary(decToBin);
 				Memory.addToMemory(Integer.toString(decToBin,2));
+				ConverterMenu();
 				break;
 			case 2:
 				System.out.println("Input binary number (e.g. 1001): ");
@@ -30,35 +32,44 @@ public class NumConverter implements Converter{
 				BinaryToDec(binToDec);
 				result = Integer.parseInt(binToDec,2) + "";
 				Memory.addToMemory(result);
+				ConverterMenu();
 				break;	
 			case 3:
 				System.out.println("Input decimal number (e.g. 987): ");
 				int decToOct = number.nextInt();
 				DecToOctal(decToOct);
 				Memory.addToMemory(Integer.toString(decToOct,8));
+				ConverterMenu();
 				break;			
 			case 4:
 				System.out.println("Input octal number (e.g. 30371): ");
 				String octToDec = string.nextLine();
 				OctalToDec(octToDec);
-				result = Integer.parseInt(octToDec,2) + "";
+				result = Integer.parseInt(octToDec,8) + "";
 				Memory.addToMemory(result);
+				ConverterMenu();
 				break;
 			case (5):
 				System.out.println("Input decimal number (e.g. 987): ");
 				int decToHex = number.nextInt();
 				DecToHexadecimal(decToHex);
 				Memory.addToMemory(Integer.toString(decToHex,16));
+				ConverterMenu();
 				break;
 			case (6):
 				System.out.println("Input hexadecimal number (e.g. 5f43c1): ");
 				String hexToDec = string.nextLine();
 				HexadecimalToDec(hexToDec);
-				result = Integer.parseInt(hexToDec,2) + "";
+				result = Integer.parseInt(hexToDec,16) + "";
 				Memory.addToMemory(result);
+				ConverterMenu();
 				break;
-			case (0):
-				System.out.println("---------------");
+			case 7:
+				Memory.showMemory();
+				ConverterMenu();
+				break;
+			case 8:
+				Menu.menu();
 				break;
 			default:
 				System.out.println("You entered wrong command! Bye bye.");
@@ -102,7 +113,7 @@ public class NumConverter implements Converter{
 	@Override
 	public void HexadecimalToDec(String dec) {
 		// TODO Auto-generated method stub
-		System.out.println("Decimal: "+Integer.parseInt(dec,2));
+		System.out.println("Decimal: "+Integer.parseInt(dec,16));
 	}
 
 }
