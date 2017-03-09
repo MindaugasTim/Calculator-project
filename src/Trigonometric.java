@@ -22,7 +22,7 @@ public class Trigonometric implements TrigoInterface {
 	@Override
 	public void trigoMenu(){
 		
-		System.out.print("1. Sin\n2. Cos\n3. Tangent\n4. Cotangent\n5. Show memory\n6. Convert one more time\n7. Go to main menu\nEnter number of command from the list: ");
+		System.out.print("1. Sin\n2. Cos\n3. Tangent\n4. Cotangent\n5. Show memory\n6. Go to main menu\nEnter number of command from the list: ");
 		int choose = scanner.nextInt();
 		
 		
@@ -39,13 +39,10 @@ public class Trigonometric implements TrigoInterface {
 		case 4:
 			countCot();
 			break;
-		case (5):
+		case 5:
 			Memory.showMemory();
 			break;
-		case (6):
-			trigoMenu();
-			break;
-		case (7):
+		case 6:
 			Menu.menu();
 			break;
 		default:
