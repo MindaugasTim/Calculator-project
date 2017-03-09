@@ -2,13 +2,14 @@
 public class NumConverter implements Converter{
 
 	public void ConverterMenu(){
-		System.out.println("Converter: "
+		System.out.println("Choose converter: "
 						+"\n1. Decimal	-> Binary"
 						+"\n2. Binary	-> Decimal"
 						+"\n3. Decimal	-> Octal"
 						+"\n4. Octal	-> Decimal"
 						+"\n5. Decimal	-> Hexadecimal"
-						+"\n6. Hexadecimal	-> Decimal");	
+						+"\n6. Hexadecimal	-> Decimal"	
+						+"\n0. EXIT");	
 	}
 	
 	@Override
