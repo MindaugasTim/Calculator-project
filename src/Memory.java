@@ -11,7 +11,7 @@ public class Memory {
 
 		if (memory.size() == 3) {
 
-			memory.remove(2);
+			memory.remove(0);
 		}
 
 	}
