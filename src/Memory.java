@@ -2,29 +2,27 @@ import java.util.ArrayList;
 
 public class Memory {
 
-	private ArrayList<String> memory = new ArrayList<String>(3);
 
-	public void addToMemory(String toMemory) {
+	private static ArrayList<String> memory = new ArrayList<String>(3);
 
-			this.memory.add(toMemory);
+	public static void addToMemory(String toMemory) {
 
-		if (this.memory.size() == 3) {
+		memory.add(toMemory);
 
-			this.memory.remove(2);
+		if (memory.size() == 3) {
+
+			memory.remove(2);
 		}
-	
 
 	}
 
-	public void showMemory() {
-		
-		
-		if (memory.size()==0) {
-		 System.out.println("Memory is empty");
-		} 	
-		this.memory.forEach(mem->System.out.println(mem));
-		
-		
+	public static void showMemory() {
+
+		if (memory.size() == 0) {
+			System.out.println("Memory is empty");
+		}
+		memory.forEach(mem -> System.out.println(mem));
+
 	}
 
 }

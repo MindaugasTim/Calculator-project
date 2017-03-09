@@ -1,20 +1,42 @@
+import java.util.Scanner;
 
-public class QuadraticEquation {
+public class QuadraticEquation implements QuadraticInterface {
 
-	public void QuadraticEquationSolver(double a, double b, double c) {
+	private double a;
+	private double b;
+	private double c;
+	private String result;
 
+	public void QuadraticEquationSolver() {
+		
+		input();
+		
 		double x = (-b + (Math.sqrt((b * b - ((4 * a * c)))))) / (2 * a);
-
 		double y = (-b - (Math.sqrt((b * b - ((4 * a * c)))))) / (2 * a);
 
 		if ((b * b - ((4 * a * c))) < 0) {
-
-			System.out.println("There are no real roots");
-
+			result = "There are no real roots";
+			output(result);
 		} else
+			result = "The Roots are " + (Double.toString(x) + " and " + Double.toString(y));
+			output(result);
 
-			System.out.println("The Roots are " + x + " or " + y);
+	}
 
+	@Override
+	public void input() {
+		System.out.println("Enter first number: ");
+		this.a = sc.nextDouble();
+		System.out.println("Enter second number: ");
+		this.b = sc.nextDouble();
+		System.out.println("Enter third number: ");
+		this.c = sc.nextDouble();
+
+	}
+
+	@Override
+	public void output(String s) {
+		System.out.println(s);
 	}
 
 }
