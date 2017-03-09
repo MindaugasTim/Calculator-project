@@ -1,11 +1,14 @@
+
+
 import java.text.DecimalFormat;
 import java.util.Scanner;
+
 
 public class Trigonometric implements TrigoInterface {
 	private Scanner scanner;
 	private double number;
 	private static DecimalFormat df = new DecimalFormat("###.##");
-	Memory memory;
+	private Memory memory;
 	private String result;
 
 	public Trigonometric(){
@@ -43,7 +46,7 @@ public class Trigonometric implements TrigoInterface {
 			trigoMenu();
 			break;
 		case (7):
-			Calculator.mainMenu();
+			Menu.menu();
 			break;
 		default:
 			System.out.println("You entered wrong command! Bye bye.");

@@ -1,3 +1,5 @@
+
+
 public class SimpleCalc implements Operations {
 
 	private String result;
@@ -50,7 +52,7 @@ public class SimpleCalc implements Operations {
 				showCalcMenu();
 				break;
 			case ("b"):
-				Calculator.mainMenu();
+				Menu.menu();
 				break;
 			default:
 				System.out.println("Choose : + - / or *");

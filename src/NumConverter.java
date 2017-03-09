@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class NumConverter implements Converter{
 
-	private Scanner number;
-	private Scanner string;
+	private Scanner number = new Scanner(System.in);
+	private Scanner string = new Scanner(System.in);
 	private String result;
 	
 	public void ConverterMenu(){

@@ -53,7 +53,7 @@ public class QuadraticEquation implements QuadraticInterface {
 				Memory.showMemory();
 				break;
 			case (3):
-				Calculator.mainMenu();
+				Menu.menu();
 				break;
 			case (0):
 				break;
