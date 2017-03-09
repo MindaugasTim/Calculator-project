@@ -20,6 +20,7 @@ public class QuadraticEquation implements QuadraticInterface {
 			result = "The Roots are " + (Double.toString(x) + " and " + Double.toString(y));
 		Memory.addToMemory(result);
 		output(result);
+		showMenu();
 
 	}
 
@@ -64,8 +65,7 @@ public class QuadraticEquation implements QuadraticInterface {
 
 	public void showMenu() {
 
-		System.out.println(" Choose 1 to solve quadratic equatation" + "\n Choose 2 to show memory"
-				+ "\n Choose 3 back to main menu" + "Choose 0 to exit");
+		System.out.println(" Choose:\n1.To solve quadratic equatation\n2. To show memory\n3. Back to main menu\n0. Exit");
 
 	}
 

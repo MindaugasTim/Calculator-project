@@ -16,30 +16,35 @@ public class SimpleCalc implements Operations {
 				this.result = add(firstNum, secondNum);
 				Memory.addToMemory(result);
 				output(result);
+				showCalcMenu();
 				break;
 			case ("-"):
 				input();
 				this.result = subtract(firstNum, secondNum);
 				Memory.addToMemory(result);
 				output(result);
+				showCalcMenu();
 				break;
 			case ("/"):
 				input();
 				this.result = divide(firstNum, secondNum);
 				Memory.addToMemory(result);
 				output(result);
+				showCalcMenu();
 				break;
 			case ("*"):
 				input();
 				this.result = multiply(firstNum, secondNum);
 				Memory.addToMemory(result);
 				output(result);
+				showCalcMenu();
 				break;
 			case ("e"):
 				i = -1;
 				break;
 			case ("m"):
 				Memory.showMemory();
+			showCalcMenu();
 				break;
 			case ("o"):
 				showCalcMenu();
