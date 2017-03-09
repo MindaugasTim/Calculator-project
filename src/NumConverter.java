@@ -41,7 +41,7 @@ public class NumConverter implements Converter{
 				System.out.println("Input octal number (e.g. 30371): ");
 				String octToDec = string.nextLine();
 				OctalToDec(octToDec);
-				result = Integer.parseInt(octToDec,2) + "";
+				result = Integer.parseInt(octToDec,8) + "";
 				Memory.addToMemory(result);
 				break;
 			case (5):
@@ -54,7 +54,7 @@ public class NumConverter implements Converter{
 				System.out.println("Input hexadecimal number (e.g. 5f43c1): ");
 				String hexToDec = string.nextLine();
 				HexadecimalToDec(hexToDec);
-				result = Integer.parseInt(hexToDec,2) + "";
+				result = Integer.parseInt(hexToDec,16) + "";
 				Memory.addToMemory(result);
 				break;
 			case (0):
@@ -102,7 +102,7 @@ public class NumConverter implements Converter{
 	@Override
 	public void HexadecimalToDec(String dec) {
 		// TODO Auto-generated method stub
-		System.out.println("Decimal: "+Integer.parseInt(dec,2));
+		System.out.println("Decimal: "+Integer.parseInt(dec,16));
 	}
 
 }
