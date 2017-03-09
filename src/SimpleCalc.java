@@ -13,49 +13,46 @@ public class SimpleCalc implements Operations {
 		while (i != -1) {
 			result = sc.next();
 			switch (result) {
-			case ("+"):
+			case ("1"):
 				input();
 				this.result = add(firstNum, secondNum);
 				Memory.addToMemory(result);
 				output(result);
 				showCalcMenu();
 				break;
-			case ("-"):
+			case ("2"):
 				input();
 				this.result = subtract(firstNum, secondNum);
 				Memory.addToMemory(result);
 				output(result);
 				showCalcMenu();
 				break;
-			case ("/"):
+			case ("3"):
 				input();
 				this.result = divide(firstNum, secondNum);
 				Memory.addToMemory(result);
 				output(result);
 				showCalcMenu();
 				break;
-			case ("*"):
+			case ("4"):
 				input();
 				this.result = multiply(firstNum, secondNum);
 				Memory.addToMemory(result);
 				output(result);
 				showCalcMenu();
 				break;
-			case ("e"):
+			case ("5"):
 				i = -1;
 				break;
-			case ("m"):
+			case ("6"):
 				Memory.showMemory();
 			showCalcMenu();
 				break;
-			case ("o"):
-				showCalcMenu();
-				break;
-			case ("b"):
+			case ("7"):
 				Menu.menu();
 				break;
 			default:
-				System.out.println("Choose : + - / or *");
+				showCalcMenu();
 			}
 
 		}
@@ -81,8 +78,8 @@ public class SimpleCalc implements Operations {
 	@Override
 	public void showCalcMenu() {
 
-		System.out.println("Choose" + "\n + to add " + "\n - to substract" + "\n / to divide" + "\n * to multiply"
-				+ "\n m show last results" + "\n o show menu" + "\n b back to main calculator menu " + "\n e to exit.");
+		System.out.println("Choose" + "\n 1 to add " + "\n 2 to substract" + "\n 3 to divide" + "\n 4 to multiply"
+				+ "\n 5 to exit." + "\n 6 show last results" + "\n 7 back to main calculator menu ");
 	}
 
 	@Override
