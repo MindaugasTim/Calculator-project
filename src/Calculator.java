@@ -2,75 +2,38 @@ import java.util.Scanner;
 
 public class Calculator {
 
-	private SimpleCalc simpleCalc;
-	private QuadraticEquation quadraticEquation;
-	private Memory memory;
-	private String result;
+	private static Scanner sc = new Scanner(System.in);
+	private static SimpleCalc simpleCalc = new SimpleCalc();
+	private static QuadraticEquation quadraticEquation = new QuadraticEquation();
+	private static Trigonometric trigonometric = new Trigonometric();
+	private static NumConverter numConverter = new NumConverter();
 
-	public void controller() {
-
-		Scanner sc = new Scanner(System.in);
-		String i = "";
-		while (i != "stop") {
-			i = sc.next();
-			switch (i) {
-			case ("+"):
-				result = simpleCalc.add(sc.nextDouble(), sc.nextDouble());
-				memory.addToMemory(result);
-				System.out.println(result);
+	public static void mainMenu() {
+		showNav();
+		while (true) {
+			int nr = sc.nextInt();
+			switch (nr) {
+			case (1):
+				simpleCalc.calculationMenu();
 				break;
-			case ("-"):
-				result = simpleCalc.subtract(sc.nextDouble(), sc.nextDouble());
-				memory.addToMemory(result);
-				System.out.println(result);
+			case (2):
+				quadraticEquation.quadraticMenu();
 				break;
-			case ("/"):
-				result = simpleCalc.divide(sc.nextDouble(), sc.nextDouble());
-				memory.addToMemory(result);
-				System.out.println(result);
+			case (3):
+				trigonometric.trigoMenu();
 				break;
-			case ("*"):
-				result = simpleCalc.multiply(sc.nextDouble(), sc.nextDouble());
-				memory.addToMemory(result);
-				System.out.println(result);
-				break;
-			case ("s"):
-				i = "stop";
+			case (0):
 				break;
 			default:
-				System.out.println("Choose : + - / or *");
+				showNav();
 			}
-
 		}
-
 	}
 
-	public SimpleCalc getSimpleCalc() {
-		return simpleCalc;
-	}
+	public static void showNav() {
+		System.out.println("Choose 1 to simple calculations" + "\n 2 quadratic equation solver"
+				+ "\n 3 trigonometric menu" + "\n 0 exit");
 
-	public void setSimpleCalc(SimpleCalc simpleCalc) {
-		this.simpleCalc = simpleCalc;
-	}
-
-	public QuadraticEquation getQuadraticEquation() {
-		return quadraticEquation;
-	}
-
-	public void setQuadraticEquation(QuadraticEquation quadraticEquation) {
-		this.quadraticEquation = quadraticEquation;
-	}
-
-	public Memory getMemory() {
-		return memory;
-	}
-
-	public void setMemory(Memory memory) {
-		this.memory = memory;
-	}
-
-	public void calcMemory() {
-		memory.showMemory();
 	}
 
 }
