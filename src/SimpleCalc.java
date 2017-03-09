@@ -15,7 +15,7 @@ public class SimpleCalc implements Operations {
 				input();
 				this.result = add(firstNum, secondNum);
 				Memory.addToMemory(result);
-				
+				output(result);
 				break;
 			case ("-"):
 				input();
