@@ -12,9 +12,13 @@ public class Menu {
 				+ "1. Simple artitmetic converter\n"
 				+ "2. Convert numbers from dec to bin etc\n"
 				+ "3. Calculate quadratic equation\n"
-				+ "4. Convert sin, cos, tan and cot");
+				+ "4. Convert sin, cos, tan and cot\n"
+				+ "5. EXIT");
 		
-		int choose = scanner.nextInt();
+		
+		int i = 0;
+		while (i != -1){
+			int choose = scanner.nextInt();
 		
 		switch (choose) {
 		
@@ -30,9 +34,13 @@ public class Menu {
 		case 4:
 			trigo.trigoMenu();
 			break;
+		case 5:
+			i = -1;
+			break;
 		default:
 			System.out.println("Wrong input");
 			break;
+		}
 		}
 	}
 
